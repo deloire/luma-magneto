@@ -3,8 +3,13 @@ package com.magneto;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.magneto.pages.LoginPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+
+import java.io.IOException;
+
+import static com.codeborne.selenide.Selenide.open;
 
 abstract public class BaseTest {
 
@@ -15,6 +20,12 @@ abstract public class BaseTest {
         Configuration.baseUrl = "https://magento.softwaretestingboard.com";
         Configuration.headless = false;
         Configuration.holdBrowserOpen = true;
+    }
+
+    public void singIn() throws IOException {
+        open("/customer/account/login");
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
     }
 
     @BeforeEach

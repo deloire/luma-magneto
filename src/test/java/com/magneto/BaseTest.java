@@ -12,6 +12,7 @@ abstract public class BaseTest {
     public void setUp() {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1280x720";
+        Configuration.baseUrl = "https://magento.softwaretestingboard.com";
         Configuration.headless = false;
         Configuration.holdBrowserOpen = true;
     }

@@ -23,8 +23,4 @@ public class LoginPage {
         signInButton.click();
     }
 
-    public String checkLogin() {
-        return myAccount.getText();
-    }
-
 }

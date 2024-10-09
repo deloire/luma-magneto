@@ -22,11 +22,11 @@ public class RegistrationPage {
         createAccountButton.click();
     }
 
-    public void fillInputs(String email, String password) throws IOException {
+    public void fillInputs(String password) throws IOException {
         Faker faker = new Faker();
         inputFirstName.sendKeys(faker.name().firstName());
         inputLastName.sendKeys(faker.name().lastName());
-        inputEmail.sendKeys(email);
+        inputEmail.sendKeys(faker.internet().emailAddress());
         inputPassword.sendKeys(password);
         confirmPassword.sendKeys(password);
         finishRegistration.click();

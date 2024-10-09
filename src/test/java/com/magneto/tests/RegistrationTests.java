@@ -13,13 +13,12 @@ public class RegistrationTests extends BaseTest {
     @Test
     public void registrationTest() throws IOException {
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("config.properties"));
-        String email = System.getProperty("USER_EMAIL");
         String password = System.getProperty("USER_PASSWORD");
 
         open("/customer/account/create/");
         RegistrationPage registrationPage = new RegistrationPage();
         registrationPage.toRegistration();
-        registrationPage.fillInputs(email, password);
+        registrationPage.fillInputs(password);
     }
 
 }

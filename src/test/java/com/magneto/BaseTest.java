@@ -18,8 +18,7 @@ abstract public class BaseTest {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1280x720";
         Configuration.baseUrl = "https://magento.softwaretestingboard.com";
-        Configuration.headless = false;
-        Configuration.holdBrowserOpen = true;
+        Configuration.headless = true;
     }
 
     public void singIn() throws IOException {
